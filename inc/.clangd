@@ -1,0 +1,5 @@
+CompileFlags:
+  Add:
+    - -I/usr/include/opencv4
+  Remove:
+    - -I/usr/include/opencv2  # remove 2.4 path if it's being picked up
