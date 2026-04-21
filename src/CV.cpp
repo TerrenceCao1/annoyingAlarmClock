@@ -7,7 +7,7 @@ using namespace std;
 using namespace cv;
 
 
-int InitCamera(Ptr<FaceDetectorYN> &detector, cv::VideoCapture& capture, int cameraID = 0, int frameWidth = 1280, int frameHeight = 720, String FOURCC = "MJPG")
+int InitCamera(Ptr<FaceDetectorYN> &detector, VideoCapture& capture, int cameraID, int frameWidth, int frameHeight, String FOURCC)
 {
 	detector = FaceDetectorYN::create(MODEL_PATH, "", Size(frameWidth, frameHeight)); 
 

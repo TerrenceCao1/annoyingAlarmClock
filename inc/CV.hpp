@@ -10,8 +10,9 @@
 #include "opencv2/objdetect/face.hpp"
 #include "opencv2/videoio.hpp"
 
-#define MODEL_PATH "../assets/cvModels/face_detection_yunet_2023mar.onnx"
+#define MODEL_PATH "/home/tzcao/Documents/2-Personal_Projects/annoyingAlarmClock/assets/cvModels/face_detection_yunet_2023mar.onnx"
 
+using namespace cv;
 // face vector index labels
 typedef enum faceIndices
 {
@@ -28,5 +29,5 @@ typedef enum faceIndices
 	// can add face_x_right_corner_mouth... etc if needed
 } faceIndices;
 
-int InitCamera(cv::FaceDetectorYN* detector, int frameWidth, int frameHeight, cv::VideoCapture* capture);
+int InitCamera(Ptr<FaceDetectorYN> &detector, VideoCapture& capture, int cameraID = 0, int frameWidth = 1280, int frameHeight = 720, String FOURCC = "MJPG");
 #endif
